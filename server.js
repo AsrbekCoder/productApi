@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(bodyparser.json());
 
-mb.connect(process.env.MB_URL, {})
+mb.connect(process.env.MB_URL, { useNewUrlParser: true })
   .then(console.log("mb conntected"))
   .catch((err) => console.log(err));
 
